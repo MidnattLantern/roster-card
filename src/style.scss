@@ -47,7 +47,9 @@ h1, span {
     user-select: none;
 }
 
+// It is recommended to keep every child to main at position absolute
 main {
+    position: relative;
     padding: 20px;
     margin: 20px;
     min-height: 500px;
@@ -81,7 +83,7 @@ main {
 
     .splash-art-selectors {
         position: absolute;
-        bottom: 35px;
+        bottom: 10px;
 
         button {
             height: 30px;
@@ -124,8 +126,8 @@ footer {
 
 .slanted-stripe-hero-wrapper {
     position: absolute;
-    top: 90px;
-    left: 100px;
+    top: 20px;
+    left: 20px;
     display: flex;
     flex-direction: row;
     user-select: none;
@@ -167,5 +169,21 @@ footer {
     &__diamond-outer {
         // fill: var(--c-body);
         fill: none;
+    }
+}
+
+@media screen and (max-width: 1024px) { // Cover the page with viewport message on small screens and windows
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--c-surface);
+        z-index: 99;
     }
 }
