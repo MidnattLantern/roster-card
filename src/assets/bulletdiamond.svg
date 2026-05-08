@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 777 777" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-607,-791)">
+        <g id="bulletdiamond" class="bulletdiamond">
+            <path id="bullets" class="bulletdiamond__bullets" d="M850.714,1137.833L607,894.12L607,791L710.12,791L953.833,1034.714L953.833,1137.833L850.714,1137.833ZM1037.167,1034.62L1280.739,791L1383.849,791L1384,791.151L1384,893.979L1140.193,1137.833L1037.167,1137.833L1037.167,1034.62ZM1140.286,1221.167L1384,1464.88L1384,1567.698L1383.698,1568L1280.88,1568L1037.167,1324.286L1037.167,1221.167L1140.286,1221.167ZM953.833,1324.229L710.11,1568L607,1568L607,1464.87L850.656,1221.167L953.833,1221.167L953.833,1324.229Z"/>
+            <g id="diamond" class="bulletdiamond__diamond" transform="matrix(1.036,1.036,-1.036,1.036,1186.124,-1073.8)">
+                <path d="M1183,992L1183,1367L808,1367L808,992L1183,992ZM1126.122,1048.878L864.878,1048.878L864.878,1310.122L1126.122,1310.122L1126.122,1048.878Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
