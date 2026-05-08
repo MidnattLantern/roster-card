@@ -52,12 +52,12 @@ npm run deploy
 ```
 
 ## Valuable lessions & what I leaned
-When exporting a vector asset in Affinity, most shapes may be intended to be exported as general `<path>` elements, however, if they resemble shapes such as rectangle or circle, even after converting to curves in Affinity, the metadata may turn them into specific shapes grouped in a `<g>` tag with matrix transformations and lots of metadata, making the SVG hard to maintain and messy in the code editor. You need to check the "Flatten transforms" checkbox in the export view.
+When exporting a vector asset in Affinity, most shapes may be intended to be exported as general `<path>` elements, however, if they resemble shapes such as rectangle or circle, even after converting to curves in Affinity, the metadata may turn them into specific shapes grouped in a `<g>` tag with matrix transformations and lots of metadata, making the SVG hard to maintain and messy in the code editor. This is great for optimization, as for instance a rectangle with transformation metadata, may take less space than a general path element. However, if you intend to dive into the metadata, path may be prefferable. To address this, you need to check the "Flatten transforms" checkbox in the export view.
 
 "Flatten transforms" is checked:
 ![export view, checking the "Flatten transforms" box](./readme-images/flatten-transfomration-setting.png)
 
-SVG meta data is messy, hard to read, and unoptimized unless you intentionally need the groups and shape specific elements:
+SVG meta data is messy and hard to read unless you intentionally need the groups and shape specific elements:
 ![SVG meta data without flattened transforms](./readme-images/unflattened-export.png)
 
 SVG meta data is clean and easily maintainable, preferable if you only need general path elements:

@@ -84,6 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
     slantedHeroIndexValue = document.querySelector<SVGTextElement>("#slanted-hero-index-value");
     if (!slantedHeroIndexValue) return;
     slantedHeroIndexValue.textContent = currentSplashArtIndex.toString();
+
+    // initialization
+    gsap.to("#NIC", {
+        y: "120%"
+    })
+    gsap.to("#OLE", {
+        y: "-120%"
+    })
+    gsap.to("#TTE", {
+        x: "120%"
+    })
 });
 
 const bulletdiamond = document.createElement("div");
@@ -100,6 +111,17 @@ function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
         x: ((splashArtWidth + splashArtGapWidth) * -currentSplashArtIndex),
         duration: 0.3
     });
+
+    gsap.to("#NIC", {
+        y: "0%"
+    })
+    gsap.to("#OLE", {
+        y: "0%"
+    })
+    gsap.to("#TTE", {
+        x: "0%"
+    })
+
     if (!slantedHeroIndexValue) return;
     slantedHeroIndexValue.textContent = setIndex.toString();
 }
