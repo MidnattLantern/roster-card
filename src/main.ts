@@ -71,6 +71,12 @@ splashArtSelectors.append(splashArtButton1, splashArtButton2, splashArtButton3);
 const svgNicoletteBanner = document.createElement("div");
 svgNicoletteBanner.classList.add('svg-nicolette-banner');
 svgNicoletteBanner.innerHTML = NicoletteSVG;
+svgNicoletteBanner.addEventListener("wheel", () => {
+    transAnimate.slideOutNicoletteBanner();
+});
+svgNicoletteBanner.addEventListener("click", () => {
+    transAnimate.slideInNicoletteBanner();
+});
 
 const slantedStripeHeroWrapper = document.createElement("div");
 slantedStripeHeroWrapper.classList.add("slanted-stripe-hero-wrapper");

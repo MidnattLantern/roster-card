@@ -111,10 +111,14 @@ footer {
     border: 1px dashed var(--c-accent);
     padding: 20px;
     width: calc(100% - 150px);
+    cursor: pointer;
 
     &:hover #NICOLETTE {
         stroke-dasharray: none;
         animation: none;
+    }
+    &:active #NICOLETTE {
+        fill: var(--c-accent);
     }
 }
 

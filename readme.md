@@ -6,6 +6,14 @@ Roster card is an experimentation and R&D lineaging from [MultiCo Roster](https:
 
 My history with graphical design range all the way back to 2017 (2015 with raster art), trained through junior high and self taught curiosity. Up until this project, my vector skills didn't stretch beyond Adobe Illustrator/ Affinity, and static SVG inline or img url import, as well as basic fill manipulation in css. This project dig deeper down the low-end source code of an SVG file, from editing id's and classes, to change the text content of a <text> element in JavaScript.
 
+Nicolette is the original character featured on this project. Written and designed by my friend, and reimagined and illustrated by me.
+
+## Features
+- Click the hero banner, a neon text with Nicolette's name will slide in.
+- Click the hero banner again, the neon text will shift in appearance from just outline to fill.
+- Click either splash hero button, the neon text will appear if it hasn't already showed up.
+- Scroll while hovering the hero banner, the neon text will slide away.
+
 ## Raster asset(s)
 The featured images are a set of drawings pulled from [MultiCo Roster](https://midnattlantern.github.io/multico-roster/). It's been compressed from its lossless PNG-format to a resource friendly webp-format through Affinity. These are the hero images, so they are the main attraction of this project. Because these assets feature transparent pixels, I can test making a backdrop shadow that isn't a square. The width and height of the source material vary in width, height and aspect ratio, which is a problem for a layout design that demand a fixed rule, this can be solved using Affinity's document setup tool and set the width/ height from there.
 
