@@ -147,7 +147,6 @@ footer {
 }
 
 .bulletdiamond {
-    // transform: translateX(50%);
 
     &__bullets {
         fill: var(--c-body);
@@ -155,10 +154,14 @@ footer {
         // stroke: var(--c-body);
         // stroke-width: 10px;
     }
-    &__diamond {
-        // fill: var(--c-body-light);
+    &__diamond-inner {
+        // fill: var(--c-body);
         fill: none;
-        stroke: var(--c-body);
-        stroke-width: 5px;
+        // stroke: var(--c-body);
+        // stroke-width: 5px;
+    }
+    &__diamond-outer {
+        // fill: var(--c-body);
+        fill: none;
     }
 }

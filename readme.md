@@ -44,3 +44,21 @@ mySVGVessel.classList.add("my-svg-vessel");
     width: 100px; /* 10px or 10000px, the SVG will scale */
 }
 ```
+
+## Deployment
+Roster card is hosted on Github pages. Deployment is done through the gh-pages node package. Whenever the project is ready for publicity, make sure your console is on the same directory as package.json (check with the `ls` command), then run the following command in the terminal:
+``` zsh
+npm run deploy
+```
+
+## Valuable lessions & what I leaned
+When exporting a vector asset in Affinity, most shapes may be intended to be exported as general `<path>` elements, however, if they resemble shapes such as rectangle or circle, even after converting to curves in Affinity, the metadata may turn them into specific shapes grouped in a `<g>` tag with matrix transformations and lots of metadata, making the SVG hard to maintain and messy in the code editor. You need to check the "Flatten transforms" checkbox in the export view.
+
+"Flatten transforms" is checked:
+![export view, checking the "Flatten transforms" box](./readme-images/flatten-transfomration-setting.png)
+
+SVG meta data is messy, hard to read, and unoptimized unless you intentionally need the groups and shape specific elements:
+![SVG meta data without flattened transforms](./readme-images/unflattened-export.png)
+
+SVG meta data is clean and easily maintainable, preferable if you only need general path elements:
+![SVG meta dta with flattened transforms](./readme-images/flattened-export.png)

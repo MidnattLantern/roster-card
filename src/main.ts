@@ -3,7 +3,7 @@ import './style.scss'
 import NicoletteSVG from "/nicolette-name.svg?raw";
 import SlantedHeroSVG from "./assets/slanted-hero.svg?raw";
 import SlantedHeroIndexSVG from "./assets/slanted-hero-index.svg?raw";
-import BulletdiamondSVG from "./assets/bulletdiamond.svg?raw";
+import BulletdiamondSVG from "./assets/bulletdiamond2.svg?raw";
 
 const splashArtWidth: number = 350;
 const splashArtGapWidth: number = 50;
@@ -100,9 +100,6 @@ function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
         x: ((splashArtWidth + splashArtGapWidth) * -currentSplashArtIndex),
         duration: 0.3
     });
-    gsap.to("#bulletdiamond", {
-        x: "100%"
-    })
     if (!slantedHeroIndexValue) return;
     slantedHeroIndexValue.textContent = setIndex.toString();
 }
