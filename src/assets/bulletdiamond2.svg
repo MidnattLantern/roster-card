@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 777 777" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="bulletdiamond">
-        <path id="bulletdiamond__bullets" class="bulletdiamond__bullets" d="M243.714,346.833L0,103.12L0,0L103.12,0L346.833,243.714L346.833,346.833L243.714,346.833ZM430.167,243.62L673.739,0L776.849,0L777,0.151L777,102.979L533.193,346.833L430.167,346.833L430.167,243.62ZM533.286,430.167L777,673.88L777,776.698L776.698,777L673.88,777L430.167,533.286L430.167,430.167L533.286,430.167ZM346.833,533.229L103.11,777L0,777L0,673.87L243.656,430.167L346.833,430.167L346.833,533.229Z"/>
-        <path id="bulletdiamond__diamond-inner" class='bulletdiamond__diamond-inner' d="M388.575,117.927L659.149,388.5L388.425,659.224L117.851,388.651L388.575,117.927Z"/>
-        <path id="bulletdiamond__diamond-outer" class="bulletdiamond__diamond-outer" d="M388.5,0L777,388.5L388.5,777L0,388.5L388.5,0ZM388.5,117.851L117.851,388.5L388.5,659.149L659.149,388.5L388.5,117.851Z"/>
-    </g>
-</svg>

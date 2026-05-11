@@ -61,8 +61,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     figure {
+        position: relative;
         overflow: hidden;
         display: flex;
         flex-direction: row;
@@ -79,11 +81,25 @@ main {
             pointer-events: none;
             filter: drop-shadow(10px 10px 5px var(--c-shadow));
         }
+
+        figcaption {
+            position: absolute;
+            top: 0;
+            right: 0;
+            writing-mode: vertical-rl;
+            font-size: 1.5rem;
+            font-family: var(--f-sans);
+            border-right: 1px dashed var(--c-body);
+            padding-right: 0.5rem;
+            z-index: 1;
+            filter: drop-shadow(1px 1px 1px var(--c-shadow));
+        }
     }
 
     .splash-art-selectors {
         position: absolute;
         bottom: 10px;
+        z-index: 1;
 
         button {
             height: 30px;
@@ -112,7 +128,7 @@ footer {
     position: absolute;
     border: 1px dashed var(--c-accent);
     padding: 20px;
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
     cursor: pointer;
 
     &:hover #NICOLETTE {
@@ -126,8 +142,8 @@ footer {
 
 .slanted-stripe-hero-wrapper {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 0px;
+    left: 70px;
     display: flex;
     flex-direction: row;
     user-select: none;
@@ -152,24 +168,22 @@ footer {
     }
 }
 
-.bulletdiamond {
+.vertical-scroll {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 50px;
+    fill: var(--c-surface);
+}
 
-    &__bullets {
-        fill: var(--c-body);
-        // fill: none;
-        // stroke: var(--c-body);
-        // stroke-width: 10px;
-    }
-    &__diamond-inner {
-        // fill: var(--c-body);
-        fill: none;
-        // stroke: var(--c-body);
-        // stroke-width: 5px;
-    }
-    &__diamond-outer {
-        // fill: var(--c-body);
-        fill: none;
-    }
+.vertical-scroll__left {
+    top: -100px;
+    left: 10px;
+}
+
+.vertical-scroll__right {
+    bottom: -100px;
+    right: 10px;
 }
 
 @media screen and (max-width: 1024px) { // Cover the page with viewport message on small screens and windows

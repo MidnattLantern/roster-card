@@ -1,8 +1,9 @@
+import gsap from 'gsap';
 import './style.scss'
 import NicoletteSVG from "/nicolette-name.svg?raw";
 import SlantedHeroSVG from "./assets/slanted-hero.svg?raw";
 import SlantedHeroIndexSVG from "./assets/slanted-hero-index.svg?raw";
-import BulletdiamondSVG from "./assets/bulletdiamond2.svg?raw";
+import ScrollFragmentSVG from "./assets/scroll-fragment.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
 
@@ -13,6 +14,10 @@ const viewport = document.getElementById("main");
 const splashArtFrame = document.createElement("figure");
 splashArtFrame.classList.add("splash-art-frame");
 splashArtFrame.id = "splashArtFrame";
+
+const splashArtCaption = document.createElement("figcaption");
+splashArtCaption.textContent = "ニコレット";
+splashArtCaption.setAttribute("aria-label", "Nicolette"); // don't slaughter the pronunciation
 
 // ==========
 // Splash art
@@ -35,7 +40,7 @@ splashArt3.id = "splashArt3";
 splashArt3.classList.add("splash-art");
 splashArt3.setAttribute("loading", "lazy");
 
-splashArtFrame.append(splashArt1, splashArt2, splashArt3);
+splashArtFrame.append(splashArt1, splashArt2, splashArt3, splashArtCaption);
 // ==========
 
 // ====================
@@ -88,13 +93,33 @@ const svgHeroIndexContainer = document.createElement("div");
 svgHeroIndexContainer.innerHTML = SlantedHeroIndexSVG;
 let slantedHeroIndexValue: null | SVGTextContentElement = null;
 
-const bulletdiamond = document.createElement("div");
-bulletdiamond.innerHTML = BulletdiamondSVG;
-
-slantedStripeHeroWrapper.append(svgHeroContainer, svgHeroIndexContainer, bulletdiamond);
+slantedStripeHeroWrapper.append(svgHeroContainer, svgHeroIndexContainer);
 // ===
 
-viewport?.append(splashArtFrame, splashArtSelectors, svgNicoletteBanner, slantedStripeHeroWrapper);
+// ===============
+// Vertical scroll
+// ===============
+const verticalScrollLeft = document.createElement("div");
+verticalScrollLeft.classList.add("vertical-scroll", "vertical-scroll__left");
+for (let i = 0; i < 16; i++) {
+    verticalScrollLeft.innerHTML += ScrollFragmentSVG;
+}
+
+const verticalScrollRight = document.createElement("div");
+verticalScrollRight.classList.add("vertical-scroll", "vertical-scroll__right");
+for (let i = 0; i < 16; i++) {
+    verticalScrollRight.innerHTML += ScrollFragmentSVG;
+}
+// ===============
+
+viewport?.append(
+    splashArtFrame,
+    splashArtSelectors,
+    svgNicoletteBanner, 
+    slantedStripeHeroWrapper,
+    verticalScrollLeft,
+    verticalScrollRight
+);
 
 function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
     sessionMemory.setCurrentSplashArtIndex(setIndex);
@@ -111,11 +136,23 @@ function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
 // Initialization
 // ==============
 document.addEventListener("DOMContentLoaded", () => {
-
     slantedHeroIndexValue = document.querySelector<SVGTextElement>("#slanted-hero-index-value");
     if (!slantedHeroIndexValue) return;
     slantedHeroIndexValue.textContent = currentSplashArtIndex.toString();
 
     transAnimate.slideOutNicoletteBanner(true);
+
+    gsap.to(".vertical-scroll__left", {
+        y: 50,
+        repeat: -1,
+        duration: 1.5,
+        ease: "none"
+    });
+    gsap.to(".vertical-scroll__right", {
+        y: -50,
+        repeat: -1,
+        duration: 1.5,
+        ease: "none"
+    });
 });
 // ==============
