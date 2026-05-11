@@ -4,6 +4,7 @@ import NicoletteSVG from "/nicolette-name.svg?raw";
 import SlantedHeroSVG from "./assets/slanted-hero.svg?raw";
 import SlantedHeroIndexSVG from "./assets/slanted-hero-index.svg?raw";
 import ScrollFragmentSVG from "./assets/scroll-fragment.svg?raw";
+import RosterCardDecorSVG from "./assets/roster-card-decor.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
 
@@ -96,6 +97,19 @@ let slantedHeroIndexValue: null | SVGTextContentElement = null;
 slantedStripeHeroWrapper.append(svgHeroContainer, svgHeroIndexContainer);
 // ===
 
+// ==============
+// top left decor
+// ==============
+const topLeftDecorWrapper = document.createElement("div");
+topLeftDecorWrapper.classList.add("top-left-decor");
+
+const rosterCardDecor = document.createElement("div");
+rosterCardDecor.classList.add("roster-card-decor");
+rosterCardDecor.innerHTML = RosterCardDecorSVG;
+
+topLeftDecorWrapper.append(rosterCardDecor, slantedStripeHeroWrapper);
+// ==============
+
 // ===============
 // Vertical scroll
 // ===============
@@ -116,7 +130,7 @@ viewport?.append(
     splashArtFrame,
     splashArtSelectors,
     svgNicoletteBanner, 
-    slantedStripeHeroWrapper,
+    topLeftDecorWrapper,
     verticalScrollLeft,
     verticalScrollRight
 );

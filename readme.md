@@ -70,3 +70,6 @@ SVG meta data is messy and hard to read unless you intentionally need the groups
 
 SVG meta data is clean and easily maintainable, preferable if you only need general path elements:
 ![SVG meta dta with flattened transforms](./readme-images/flattened-export.png)
+
+## Acknowledgements
+https://www.fontspace.com/martin-gaming-font-f162455

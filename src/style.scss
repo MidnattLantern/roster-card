@@ -15,11 +15,10 @@
 }
 
 :root {
-    --c-body: #ac97a5;
-    --c-surface: #1a1a1a;
-    --c-accent: #d4273e;
-    --c-body-light: #d7d7d7;
-    --c-shadow: #0000006b;
+    --c-body: rgb(200, 190, 205);
+    --c-surface: rgb(25, 25, 30);
+    --c-accent: rgb(212, 39, 62);
+    --c-shadow: rgba(0, 0, 0, 0.42);
 
     --f-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
     --f-heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -140,17 +139,32 @@ footer {
     }
 }
 
-.slanted-stripe-hero-wrapper {
+.top-left-decor {
     position: absolute;
     top: 0px;
-    left: 70px;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    fill: var(--c-surface);
+
+    &__body {
+        fill: var(--c-body);
+    }
+    &__body-accent {
+        fill: var(--c-accent);
+    }
+}
+
+.slanted-stripe-hero-wrapper {
     display: flex;
     flex-direction: row;
     user-select: none;
     pointer-events: none;
+    width: 100%;
 
     div {
-        height: 60px;
+        height: 100px;
     }
 }
 
@@ -168,6 +182,7 @@ footer {
     }
 }
 
+
 .vertical-scroll {
     display: flex;
     flex-direction: column;
@@ -184,6 +199,10 @@ footer {
 .vertical-scroll__right {
     bottom: -100px;
     right: 10px;
+
+    svg {
+        transform: rotate(180deg);
+    }
 }
 
 @media screen and (max-width: 1024px) { // Cover the page with viewport message on small screens and windows
