@@ -51,19 +51,22 @@ const splashArtSelectors = document.createElement("div");
 splashArtSelectors.classList.add("splash-art-selectors");
 
 const splashArtButton1 = document.createElement("button");
-splashArtButton1.textContent = "splash hero 0";
+splashArtButton1.textContent = "Splash hero 1";
+splashArtButton1.classList.add("splash-preview-1");
 splashArtButton1.addEventListener("click", () => {
     handleScrollSplashArt(0);
 })
 
 const splashArtButton2 = document.createElement("button");
-splashArtButton2.textContent = "splash hero 1";
+splashArtButton2.textContent = " Splash hero 2";
+splashArtButton2.classList.add("splash-preview-2");
 splashArtButton2.addEventListener("click", () => {
     handleScrollSplashArt(1);
 })
 
 const splashArtButton3 = document.createElement("button");
-splashArtButton3.textContent = "splash hero 2";
+splashArtButton3.textContent = "Splash hero 3";
+splashArtButton3.classList.add("splash-preview-3");
 splashArtButton3.addEventListener("click", () => {
     handleScrollSplashArt(2);
 })

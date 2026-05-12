@@ -14,11 +14,20 @@
     100% {stroke-dasharray: 0.5px, 0.5px;}
 }
 
+@keyframes pulse {
+    0% {color: var(--c-accent);}
+    50% {color: var(--c-body-lighter);}
+    100% {color: var(--c-accent);}
+}
+
 :root {
     --c-body: rgb(200, 190, 205);
+    --c-body-lighter: rgb(250, 240, 255);
     --c-surface: rgb(25, 25, 30);
     --c-accent: rgb(212, 39, 62);
-    --c-shadow: rgba(0, 0, 0, 0.42);
+    --c-shadow: rgba(0, 0, 0, 0.4);
+    --c-shadow-darker: rgb(0, 0, 0);
+    --c-clear: rgba(0, 0, 0, 0);
 
     --f-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
     --f-heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -51,7 +60,7 @@ main {
     position: relative;
     padding: 20px;
     margin: 20px;
-    min-height: 500px;
+    min-height: 650px;
     border-radius: 10px;
     box-shadow: 0 0 50px var(--c-shadow);
     background-image: url("./assets/grid.png");
@@ -85,7 +94,7 @@ main {
             position: absolute;
             top: 0;
             right: 0;
-            writing-mode: vertical-rl;
+            writing-mode: vertical-rl; // tategaki for the katakana
             font-size: 1.5rem;
             font-family: var(--f-sans);
             border-right: 1px dashed var(--c-body);
@@ -97,19 +106,54 @@ main {
 
     .splash-art-selectors {
         position: absolute;
-        bottom: 10px;
+        bottom: 0;
+        display: flex;
+        align-items: end;
         z-index: 1;
 
         button {
-            height: 30px;
+            width: 150px;
+            height: 50px;
+            border: none;
+            border-radius: 0;
+            transition: all 0.1s ease;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            font-family: var(--f-sans);   
+            font-weight: 800;
+            color: var(--c-body-lighter);
+            text-shadow: 0 0 5px var(--c-shadow-darker);
+            border-top: 1px solid var(--c-accent);
+            box-shadow: inset 0 5px 5px var(--c-shadow-darker);
+
+            &:focus,
+            &:hover {
+                outline: none;
+                height: 80px;
+                animation: pulse 2s infinite;
+                cursor: pointer;
+            }
         }
+    }
+    .splash-preview-1 {
+        background: url("preview-1-dim.webp");
+    }
+    .splash-preview-2 {
+        background: url("preview-2-dim.webp");
+    }
+    .splash-preview-3 {
+        background: url("preview-3-dim.webp");
     }
 }
 
 footer {
+    /*
     position: absolute;
     bottom: 10px;
     left: 20px;
+    */
     width: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
@@ -215,5 +259,21 @@ footer {
         height: 100vh;
         background-color: var(--c-surface);
         z-index: 99;
+
+        .author-info {
+            opacity: 0;
+        }
+    }
+}
+
+// prevent awkward layout on extremely wide screens
+@media screen and (min-width: 1600px) {
+    main {
+        width: 1600px;
+        margin-left: calc(50vw - 800px);
+    }
+
+    .viewport-info::after {
+        content: ", but not this wide";
     }
 }
