@@ -1,10 +1,11 @@
 import gsap from 'gsap';
 import './style.scss'
 import NicoletteSVG from "/nicolette-name.svg?raw";
-import SlantedHeroSVG from "./assets/slanted-hero.svg?raw";
-import SlantedHeroIndexSVG from "./assets/slanted-hero-index.svg?raw";
+//import SlantedHeroSVG from "./assets/slanted-hero.svg?raw";
+//import SlantedHeroIndexSVG from "./assets/slanted-hero-index.svg?raw";
 import ScrollFragmentSVG from "./assets/scroll-fragment.svg?raw";
 import RosterCardDecorSVG from "./assets/roster-card-decor.svg?raw";
+import HeroIndexSVG from "./assets/hero-index.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
 
@@ -84,18 +85,26 @@ svgNicoletteBanner.addEventListener("click", () => {
     transAnimate.slideInNicoletteBanner();
 });
 
-const slantedStripeHeroWrapper = document.createElement("div");
-slantedStripeHeroWrapper.classList.add("slanted-stripe-hero-wrapper");
+//const slantedStripeHeroWrapper = document.createElement("div");
+//slantedStripeHeroWrapper.classList.add("slanted-stripe-hero-wrapper");
 
-const svgHeroContainer = document.createElement("div");
-svgHeroContainer.innerHTML = SlantedHeroSVG;
+//const svgHeroContainer = document.createElement("div");
+//svgHeroContainer.innerHTML = SlantedHeroSVG;
 
-const svgHeroIndexContainer = document.createElement("div");
-svgHeroIndexContainer.innerHTML = SlantedHeroIndexSVG;
-let slantedHeroIndexValue: null | SVGTextContentElement = null;
+//const svgHeroIndexContainer = document.createElement("div");
+//svgHeroIndexContainer.innerHTML = SlantedHeroIndexSVG;
+//let slantedHeroIndexValue: null | SVGTextContentElement = null;
 
-slantedStripeHeroWrapper.append(svgHeroContainer, svgHeroIndexContainer);
+//slantedStripeHeroWrapper.append(svgHeroContainer, svgHeroIndexContainer);
 // ===
+
+// ==========
+// Hero index
+// ==========
+const heroIndexWrapper = document.createElement("div");
+heroIndexWrapper.classList.add("hero-index");
+heroIndexWrapper.innerHTML = HeroIndexSVG;
+// ==========
 
 // ==============
 // top left decor
@@ -107,7 +116,11 @@ const rosterCardDecor = document.createElement("div");
 rosterCardDecor.classList.add("roster-card-decor");
 rosterCardDecor.innerHTML = RosterCardDecorSVG;
 
-topLeftDecorWrapper.append(rosterCardDecor, slantedStripeHeroWrapper);
+topLeftDecorWrapper.append(
+    rosterCardDecor,
+//    slantedStripeHeroWrapper,
+    heroIndexWrapper
+);
 // ==============
 
 // ===============
@@ -142,19 +155,26 @@ function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
     transAnimate.slideSplashHero();
     transAnimate.slideInNicoletteBanner();
 
-    if (!slantedHeroIndexValue) return;
-    slantedHeroIndexValue.textContent = setIndex.toString();
+//    if (!slantedHeroIndexValue) return;
+//    slantedHeroIndexValue.textContent = setIndex.toString();
 }
 
 // ==============
 // Initialization
 // ==============
 document.addEventListener("DOMContentLoaded", () => {
-    slantedHeroIndexValue = document.querySelector<SVGTextElement>("#slanted-hero-index-value");
-    if (!slantedHeroIndexValue) return;
-    slantedHeroIndexValue.textContent = currentSplashArtIndex.toString();
+//    slantedHeroIndexValue = document.querySelector<SVGTextElement>("#slanted-hero-index-value");
+//    if (!slantedHeroIndexValue) return;
+//    slantedHeroIndexValue.textContent = currentSplashArtIndex.toString();
 
     transAnimate.slideOutNicoletteBanner(true);
+
+    gsap.to("#horizontal-scroller-pattern", {
+        x: "",
+        repeat: -1,
+        duration: 5.0,
+        ease: "none"
+    })
 
     gsap.to(".vertical-scroll__left", {
         y: 50,

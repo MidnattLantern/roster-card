@@ -143,9 +143,9 @@ footer {
     position: absolute;
     top: 0px;
     left: 80px;
-    display: flex;
-    flex-direction: column;
-    width: 350px;
+//    display: flex;
+//    flex-direction: column;
+//    width: 350px;
     fill: var(--c-surface);
 
     &__body {
@@ -156,6 +156,29 @@ footer {
     }
 }
 
+.hero-index {
+    fill: var(--c-surface);
+    user-select: none;
+    pointer-events: none;
+
+    #horizontal-scroller-pattern {
+        width: 10px;
+        height: 10px;
+    }
+
+    .hero-index-text {
+        font-family: var(--f-mono);
+        font-size: 9rem;
+        fill: var(--c-body);
+    }
+
+    #hero-index-value {
+        font-family: var(--f-mono);
+        font-size: 9rem;
+        fill: var(--c-accent);
+    }
+}
+/*
 .slanted-stripe-hero-wrapper {
     display: flex;
     flex-direction: row;
@@ -167,7 +190,9 @@ footer {
         height: 100px;
     }
 }
+*/
 
+/*
 .slanted-hero {
     fill: var(--c-surface);
 
@@ -181,6 +206,7 @@ footer {
         fill: var(--c-accent);
     }
 }
+*/
 
 
 .vertical-scroll {
