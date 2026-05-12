@@ -60,6 +60,7 @@ npm run deploy
 ```
 
 ## Valuable lessions & what I leaned
+### Export & path compression
 When exporting a vector asset in Affinity, most shapes may be intended to be exported as general `<path>` elements, however, if they resemble shapes such as rectangle or circle, even after converting to curves in Affinity, the metadata may turn them into specific shapes grouped in a `<g>` tag with matrix transformations and lots of metadata, making the SVG hard to maintain and messy in the code editor. This is great for optimization, as for instance a rectangle with transformation metadata, may take less space than a general path element. However, if you intend to dive into the metadata, path may be prefferable. To address this, you need to check the "Flatten transforms" checkbox in the export view.
 
 "Flatten transforms" is checked:
@@ -70,6 +71,9 @@ SVG meta data is messy and hard to read unless you intentionally need the groups
 
 SVG meta data is clean and easily maintainable, preferable if you only need general path elements:
 ![SVG meta dta with flattened transforms](./readme-images/flattened-export.png)
+
+### Unsolved - GSAP and clipping paths
+In attempt to learn transitional animation by transforming the position directly from an SVG file using JavaScript (GSAP), some vector elements are nested in a `<clipPath>` 'container', and its shape overlapping the clipPath:s size. The idea is to target the shape inside `<clipPath>` with its id, then apple a gsap animation. Being new to this front of development, I am unsure how to compare this method to using HTML and CSS, or how HTML and XML may behave differently regarding this, or even what method is optimal, encouraged and discouraged. I had a pain-point encounter while doing the horizontal infinite scroll of the slanted lines for the hero-index display; first of all, GSAP couldn't seem to control how far I wanted to apply the x-transformation, whether giving a positive or negative integer, even 0, didn't make a difference. Neither px units in quotations. Currently, it's just an empty string, which seem to be enough to make it move at all. The next pain point were my limitated option to the clip-paht's witdh. For reasons I couldn't figure out, I am limited to a oddly specific width, I had to accept a max-witdh or make it smaller, leaving it wider would give me a gap after the GSAP animation finished. Making the overlapping shape wider in Affinity didn't seem to do any difference whatsoever, it only made GSAP scroll faster as there were more content to scroll through. I am content with the final result, but if I had more technical knowledge during the making of this, the horizontal scroll animation would be wider.
 
 ## Acknowledgements
 https://www.fontspace.com/martin-gaming-font-f162455

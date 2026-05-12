@@ -1,15 +1,14 @@
-import gsap from 'gsap';
 import './style.scss'
 import NicoletteSVG from "/nicolette-name.svg?raw";
-//import SlantedHeroSVG from "./assets/slanted-hero.svg?raw";
-//import SlantedHeroIndexSVG from "./assets/slanted-hero-index.svg?raw";
 import ScrollFragmentSVG from "./assets/scroll-fragment.svg?raw";
 import RosterCardDecorSVG from "./assets/roster-card-decor.svg?raw";
 import HeroIndexSVG from "./assets/hero-index.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
+import { loopAnimate } from './loop-animate';
 
 let currentSplashArtIndex = sessionMemory.getCurrentSplashArtIndex();
+let heroIndexValue: null | SVGTextContentElement = null;
 
 const viewport = document.getElementById("main");
 
@@ -85,17 +84,6 @@ svgNicoletteBanner.addEventListener("click", () => {
     transAnimate.slideInNicoletteBanner();
 });
 
-//const slantedStripeHeroWrapper = document.createElement("div");
-//slantedStripeHeroWrapper.classList.add("slanted-stripe-hero-wrapper");
-
-//const svgHeroContainer = document.createElement("div");
-//svgHeroContainer.innerHTML = SlantedHeroSVG;
-
-//const svgHeroIndexContainer = document.createElement("div");
-//svgHeroIndexContainer.innerHTML = SlantedHeroIndexSVG;
-//let slantedHeroIndexValue: null | SVGTextContentElement = null;
-
-//slantedStripeHeroWrapper.append(svgHeroContainer, svgHeroIndexContainer);
 // ===
 
 // ==========
@@ -118,7 +106,6 @@ rosterCardDecor.innerHTML = RosterCardDecorSVG;
 
 topLeftDecorWrapper.append(
     rosterCardDecor,
-//    slantedStripeHeroWrapper,
     heroIndexWrapper
 );
 // ==============
@@ -155,38 +142,22 @@ function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
     transAnimate.slideSplashHero();
     transAnimate.slideInNicoletteBanner();
 
-//    if (!slantedHeroIndexValue) return;
-//    slantedHeroIndexValue.textContent = setIndex.toString();
+    if (!heroIndexValue) return;
+    heroIndexValue.textContent = setIndex.toString();
 }
 
 // ==============
 // Initialization
 // ==============
 document.addEventListener("DOMContentLoaded", () => {
-//    slantedHeroIndexValue = document.querySelector<SVGTextElement>("#slanted-hero-index-value");
-//    if (!slantedHeroIndexValue) return;
-//    slantedHeroIndexValue.textContent = currentSplashArtIndex.toString();
+    heroIndexValue = document.querySelector<SVGTextElement>("#hero-index-value");
+    if (!heroIndexValue) return;
+    heroIndexValue.textContent = currentSplashArtIndex.toString();
 
     transAnimate.slideOutNicoletteBanner(true);
 
-    gsap.to("#horizontal-scroller-pattern", {
-        x: "",
-        repeat: -1,
-        duration: 5.0,
-        ease: "none"
-    })
-
-    gsap.to(".vertical-scroll__left", {
-        y: 50,
-        repeat: -1,
-        duration: 1.5,
-        ease: "none"
-    });
-    gsap.to(".vertical-scroll__right", {
-        y: -50,
-        repeat: -1,
-        duration: 1.5,
-        ease: "none"
-    });
+    loopAnimate.scrollHeroIndexPattern();
+    loopAnimate.scrollVerticalEdgeLeftPattern();
+    loopAnimate.scrollVerticalEdgeRightPattern();
 });
 // ==============

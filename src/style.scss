@@ -170,6 +170,7 @@ footer {
         font-family: var(--f-mono);
         font-size: 9rem;
         fill: var(--c-body);
+        text-transform: uppercase;
     }
 
     #hero-index-value {
@@ -178,36 +179,6 @@ footer {
         fill: var(--c-accent);
     }
 }
-/*
-.slanted-stripe-hero-wrapper {
-    display: flex;
-    flex-direction: row;
-    user-select: none;
-    pointer-events: none;
-    width: 100%;
-
-    div {
-        height: 100px;
-    }
-}
-*/
-
-/*
-.slanted-hero {
-    fill: var(--c-surface);
-
-    text {
-        font-family: monospace;
-        font-size: 50px;
-        fill: var(--c-body);
-    }
-
-    .slanted-hero__index {
-        fill: var(--c-accent);
-    }
-}
-*/
-
 
 .vertical-scroll {
     display: flex;
