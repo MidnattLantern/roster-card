@@ -4,6 +4,7 @@ import ScrollFragmentSVG from "./assets/scroll-fragment.svg?raw";
 import RosterCardDecorSVG from "./assets/roster-card-decor.svg?raw";
 import HeroIndexSVG from "./assets/hero-index.svg?raw";
 import GenDecor1SVG from "./assets/gen-decor-1.svg?raw";
+import CharDescriptionSVG from "./assets/char-description.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
 import { loopAnimate } from './loop-animate';
@@ -83,6 +84,7 @@ svgNicoletteBanner.classList.add('svg-nicolette-banner');
 svgNicoletteBanner.innerHTML = NicoletteSVG;
 svgNicoletteBanner.addEventListener("wheel", () => {
     transAnimate.slideOutNicoletteBanner();
+    transAnimate.resetCharDescriptionText();
 });
 svgNicoletteBanner.addEventListener("click", () => {
     transAnimate.slideInNicoletteBanner();
@@ -123,8 +125,12 @@ topRightDecorWrapper.classList.add("top-right-decor");
 const genDecor1 = document.createElement("div");
 genDecor1.innerHTML = GenDecor1SVG;
 
+const charDescription = document.createElement("div");
+charDescription.innerHTML = CharDescriptionSVG;
+
 topRightDecorWrapper.append(
-    genDecor1
+    genDecor1,
+    charDescription
 );
 // ===============
 
@@ -160,6 +166,7 @@ function handleScrollSplashArt(setIndex: 0 | 1 | 2 ) {
 
     transAnimate.slideSplashHero();
     transAnimate.slideInNicoletteBanner();
+    transAnimate.slideCharDescriptionText();
 
     if (!heroIndexValue) return;
     heroIndexValue.textContent = setIndex.toString();
@@ -179,5 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loopAnimate.scrollVerticalEdgeLeftPattern();
     loopAnimate.scrollVerticalEdgeRightPattern();
     loopAnimate.spinGeneralDecor1();
+    loopAnimate.spinCharDescriptionWheel();
 });
 // ==============

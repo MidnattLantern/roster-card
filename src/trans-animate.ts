@@ -40,8 +40,28 @@ function slideSplashHero() {
     });
 }
 
+function slideCharDescriptionText() {
+    gsap.to(".style-char-description-bottom-text", {
+        x: 1000
+    })
+    gsap.to(".style-char-description-top-text", {
+        x: -1000
+    })
+}
+
+function resetCharDescriptionText() {
+    gsap.to(".style-char-description-bottom-text", {
+        x: 0
+    })
+    gsap.to(".style-char-description-top-text", {
+        x: 0
+    })
+}
+
 export const transAnimate = {
     slideInNicoletteBanner,
     slideOutNicoletteBanner,
-    slideSplashHero
+    slideSplashHero,
+    slideCharDescriptionText,
+    resetCharDescriptionText
 }

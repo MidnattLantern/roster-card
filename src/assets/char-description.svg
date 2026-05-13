@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1885 492" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-1431.555425,-699.271961)">
+        <g id="char-description">
+            <g id="edges">
+                <g id="circle-1" transform="matrix(1.7,0,0,1.7,-1653.543307,-661.417323)">
+                    <path d="M2171.332,1084.006C2159.027,1067.16 2148.897,1048.626 2141.356,1028.82M2553.202,805.929C2565.803,823.212 2576.116,842.268 2583.695,862.649" style="fill:none;stroke-width:6.13px;"/>
+                </g>
+                <g id="circle-2" transform="matrix(2.3,0,0,2.3,-3070.866142,-1228.346457)">
+                    <path d="M2149.514,1047.713C2143.16,1034.605 2137.981,1020.823 2134.117,1006.505M2574.956,842.177C2581.283,855.247 2586.441,868.986 2590.293,883.259" style="fill:none;stroke-width:4.53px;"/>
+                </g>
+                <g id="circle-3" transform="matrix(2.9,0,0,2.9,-4488.188976,-1795.275591)">
+                    <path d="M2583.983,863.427C2587.856,873.957 2591,884.838 2593.354,896.009M2140.464,1026.437C2136.585,1015.908 2133.436,1005.027 2131.077,993.855" style="fill:none;stroke-width:3.59px;"/>
+                </g>
+                <g id="circle-4" transform="matrix(3.5,0,0,3.5,-5905.511811,-2362.204724)">
+                    <path d="M2135.783,1012.373C2133.161,1003.578 2131.039,994.568 2129.448,985.377M2588.627,877.39C2591.248,886.186 2593.371,895.196 2594.961,904.387" style="fill:none;stroke-width:2.98px;"/>
+                </g>
+                <g id="top-right" transform="matrix(1.333333,0,0,1,-1102.362205,0)">
+                    <path d="M2775.808,708.661L3307.087,708.661L3307.087,803.15L2824.141,803.15C2812.153,767.976 2795.723,736.054 2775.808,708.661Z" style="fill:none;stroke-width:8.84px;"/>
+                </g>
+                <g id="bottom-left" transform="matrix(-1.333333,0,-0,-1,5850.393701,1890.054315)">
+                    <path d="M2775.808,708.661L3307.087,708.661L3307.087,803.15L2824.141,803.15C2812.153,767.976 2795.723,736.054 2775.808,708.661Z" style="fill:none;stroke-width:8.84px;"/>
+                </g>
+            </g>
+            <g id="center-circle">
+                <circle id="outer" cx="2362.205" cy="944.882" r="236.22" style="fill:none;stroke-width:8.33px;stroke-dasharray:41.667,41.667,0,0,0,0;"/>
+                <g id="inner" transform="matrix(0.799897,0,0,0.799897,472.684827,189.073931)">
+                    <circle cx="2362.205" cy="944.882" r="236.22" style="fill:none;stroke-width:5.21px;stroke-dasharray:26.045,78.135,0,0,0,0;"/>
+                </g>
+                <path id="outer-thick-accent" d="M2503.888,755.906C2561.277,799.018 2598.425,867.646 2598.425,944.882" style="fill:none;stroke-width:16.67px;"/>
+            </g>
+            <g id="char-description-bottom-text" transform="matrix(0.277113,0,0,0.288822,2604.960966,773.561383)">
+                <g transform="matrix(366.385182,0,0,366.385182,1405.300646,915.490967)">
+                </g>
+                <g class="style-char-description-bottom-text">
+                    <text class="char-descrption-text" x="-3211.904px" y="915.491px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:366.385px;">...of a terrible fate</text>
+                </g>
+            </g>
+            <g id="char-description-top-text" transform="matrix(0.277113,0,0,0.288822,3563.571955,679.073194)">
+                <g transform="matrix(366.385182,0,0,366.385182,-2112.569582,915.490967)">
+                </g>
+                <g class="style-char-description-top-text">
+                    <text class="char-descrption-text" x="-6509.907px" y="915.491px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:366.385px;">Street rat victim...</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

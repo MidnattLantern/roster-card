@@ -37,9 +37,20 @@ function spinGeneralDecor1() {
     })
 }
 
+function spinCharDescriptionWheel() {
+    gsap.to("#center-circle", {
+        rotate: -360,
+        duration: 15,
+        transformOrigin: "center",
+        repeat: -1,
+        ease: "none"
+    })
+}
+
 export const loopAnimate = {
     scrollHeroIndexPattern,
     scrollVerticalEdgeLeftPattern,
     scrollVerticalEdgeRightPattern,
-    spinGeneralDecor1
+    spinGeneralDecor1,
+    spinCharDescriptionWheel
 }

@@ -251,6 +251,12 @@ footer {
     flex-direction: column;
     fill: var(--c-surface);
     stroke: var(--c-surface);
+    user-select: none;
+    pointer-events: none;
+
+    .char-descrption-text {
+        fill: var(--c-body);
+    }
 }
 
 @media screen and (max-width: 1024px) { // Cover the page with viewport message on small screens and windows
