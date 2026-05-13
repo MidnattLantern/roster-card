@@ -20,9 +20,20 @@
     100% {color: var(--c-accent);}
 }
 
+@keyframes fragments-flicker {
+    0% {opacity: 0.5;}
+    85% {opacity: 0;}
+    86% {opacity: 0.5;}
+    91% {opacity: 0;}
+    92% {opacity: 0.5;}
+    93% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 :root {
     --c-body: rgb(200, 190, 205);
     --c-body-lighter: rgb(250, 240, 255);
+    --c-body-darker: rgb(100, 90, 105);
     --c-surface: rgb(25, 25, 30);
     --c-accent: rgb(212, 39, 62);
     --c-shadow: rgba(0, 0, 0, 0.4);
@@ -117,19 +128,20 @@ main {
             fill: var(--c-surface);
 
             .selector-decor-dash {
-                fill: var(--c-body);
+                fill: var(--c-accent);
             }
 
             .selector-decor-fragments {
                 fill: var(--c-accent);
+                animation: fragments-flicker 5s infinite;
             }
 
             .selector-decor-waves {
-                fill: var(--c-accent);
+                fill: var(--c-body-darker);
             }
 
             .selector-decor-holes {
-                fill: var(--c-body);
+                fill: var(--c-body-darker);
             }
         }
 
@@ -171,14 +183,10 @@ main {
 }
 
 footer {
-    /*
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    */
     width: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #NICOLETTE {

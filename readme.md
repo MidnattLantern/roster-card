@@ -23,7 +23,9 @@ The grid image is a screenshot of Blender's editor view, an appropriate backgrou
 
 
 ## AI disclosure
-I remain committed to distancing myself from AI and LLMs by minimizing my use of them. Claude may have been involved when looking up technical information, such as TypeScript flags or syntax, Vite documentation, or for grammatical consultation on paragraphs.
+[no-ai-icon.com](https://no-ai-icon.com/)
+
+I remain committed to distancing myself from AI and LLMs by minimizing my use of them. Claude have been involved strictly for looking up technical information, such as TypeScript flags or syntax, Vite documentation, or oddly specific SVG gotchas, alongside traditional reading in forums such as Reddit or Stack Overflow. However, no code, nor any vector and raster assets were AI generated.
 
 Generating a raster image through AI was part of the vocational training programme. This project dodged that task by raising ethical concerns (carbon emissions, uncompensated artist theft, etc.) with the teacher. This is not an outright rejection of generative AI and its inevitable use in professional life, but an act to reduce its use whenever possible, reserving generative AI until it's absolutely necessary while encouraging more ethical methods of creation.
 
@@ -80,3 +82,4 @@ In attempt to learn transitional animation by transforming the position directly
 
 ## Acknowledgements
 https://www.fontspace.com/martin-gaming-font-f162455
+https://no-ai-icon.com/
