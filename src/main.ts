@@ -3,6 +3,7 @@ import NicoletteSVG from "/nicolette-name.svg?raw";
 import ScrollFragmentSVG from "./assets/scroll-fragment.svg?raw";
 import RosterCardDecorSVG from "./assets/roster-card-decor.svg?raw";
 import HeroIndexSVG from "./assets/hero-index.svg?raw";
+import GenDecor1SVG from "./assets/gen-decor-1.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
 import { loopAnimate } from './loop-animate';
@@ -114,6 +115,20 @@ topLeftDecorWrapper.append(
 // ==============
 
 // ===============
+// top right decor
+// ===============
+const topRightDecorWrapper = document.createElement("div");
+topRightDecorWrapper.classList.add("top-right-decor");
+
+const genDecor1 = document.createElement("div");
+genDecor1.innerHTML = GenDecor1SVG;
+
+topRightDecorWrapper.append(
+    genDecor1
+);
+// ===============
+
+// ===============
 // Vertical scroll
 // ===============
 const verticalScrollLeft = document.createElement("div");
@@ -134,6 +149,7 @@ viewport?.append(
     splashArtSelectors,
     svgNicoletteBanner, 
     topLeftDecorWrapper,
+    topRightDecorWrapper,
     verticalScrollLeft,
     verticalScrollRight
 );
@@ -162,5 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loopAnimate.scrollHeroIndexPattern();
     loopAnimate.scrollVerticalEdgeLeftPattern();
     loopAnimate.scrollVerticalEdgeRightPattern();
+    loopAnimate.spinGeneralDecor1();
 });
 // ==============

@@ -187,9 +187,6 @@ footer {
     position: absolute;
     top: 0px;
     left: 80px;
-//    display: flex;
-//    flex-direction: column;
-//    width: 350px;
     fill: var(--c-surface);
 
     &__body {
@@ -246,6 +243,16 @@ footer {
     }
 }
 
+.top-right-decor {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    fill: var(--c-surface);
+    stroke: var(--c-surface);
+}
+
 @media screen and (max-width: 1024px) { // Cover the page with viewport message on small screens and windows
     footer {
         display: flex;
@@ -267,7 +274,7 @@ footer {
 }
 
 // prevent awkward layout on extremely wide screens
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1700px) {
     main {
         width: 1600px;
         margin-left: calc(50vw - 800px);

@@ -27,9 +27,19 @@ function scrollVerticalEdgeRightPattern() {
     });
 }
 
+function spinGeneralDecor1() {
+    gsap.to("#spinning", {
+        rotate: -360,
+        duration: 5,
+        transformOrigin: "center",
+        repeat: -1,
+        ease: "none"
+    })
+}
+
 export const loopAnimate = {
     scrollHeroIndexPattern,
     scrollVerticalEdgeLeftPattern,
-    scrollVerticalEdgeRightPattern
-
+    scrollVerticalEdgeRightPattern,
+    spinGeneralDecor1
 }
