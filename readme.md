@@ -4,6 +4,8 @@ Live link: [midnattlantern.github.io/roster-card](https://midnattlantern.github.
 ## About Roster Card
 Roster card is an experimentation and R&D lineaging from [MultiCo Roster](https://midnattlantern.github.io/multico-roster/), to discover new creative ways to express and present artistic elements for MultiCo Roster through mutable vector graphics. This experimentation serves to support my personal ambition to design engaging user interactions and convince visitors/users through instinct. It's also part of vocational training in graphical design.
 
+The aesthetics takes inspiration from japanese mecha and future cyberpunk, featuring straight corners, diagonal elements, and geometry. This style is appropriate for a school assignment about vector manipulation and animation (with GSAP).
+
 My history with graphical design range all the way back to 2017 (2015 with raster art), trained through junior high and self taught curiosity. Up until this project, my vector skills didn't stretch beyond Adobe Illustrator/ Affinity, and static SVG inline or img url import, as well as basic fill manipulation in css. This project dig deeper down the low-end source code of an SVG file, from editing id's and classes, to change the text content of a <text> element in JavaScript.
 
 Nicolette is the original character featured on this project. Written and designed by my friend, and reimagined and illustrated by me.
@@ -20,7 +22,7 @@ The featured images are a set of drawings pulled from [MultiCo Roster](https://m
 The grid image is a screenshot of Blender's editor view, an appropriate background for a R&D project experimenting on graphical technicality.
 
 ## Vector asset(s)
-
+All vector assets were made in Affinity (free tier), then later manipulated in VS Code to acces, add, remove, or edit classes, id's, and styles.
 
 ## AI disclosure
 [no-ai-icon.com](https://no-ai-icon.com/)
@@ -81,5 +83,6 @@ The vector assets of this project use more shapes and less strokes than initiall
 In attempt to learn transitional animation by transforming the position directly from an SVG file using JavaScript (GSAP), some vector elements are nested in a `<clipPath>` 'container', and its shape overlapping the clipPath:s size. The idea is to target the shape inside `<clipPath>` with its id, then apple a gsap animation. Being new to this front of development, I am unsure how to compare this method to using HTML and CSS, or how HTML and XML may behave differently regarding this, or even what method is optimal, encouraged and discouraged. I had a pain-point encounter while doing the horizontal infinite scroll of the slanted lines for the hero-index display; first of all, GSAP couldn't seem to control how far I wanted to apply the x-transformation, whether giving a positive or negative integer, even 0, didn't make a difference. Neither px units in quotations. Currently, it's just an empty string, which seem to be enough to make it move at all. The next pain point were my limitated option to the clip-paht's witdh. For reasons I couldn't figure out, I am limited to a oddly specific width, I had to accept a max-witdh or make it smaller, leaving it wider would give me a gap after the GSAP animation finished. Making the overlapping shape wider in Affinity didn't seem to do any difference whatsoever, it only made GSAP scroll faster as there were more content to scroll through. I am content with the final result, but if I had more technical knowledge during the making of this, the horizontal scroll animation would be wider.
 
 ## Acknowledgements
-https://www.fontspace.com/martin-gaming-font-f162455
-https://no-ai-icon.com/
+- https://www.fontspace.com/martin-gaming-font-f162455
+- https://gsap.com/
+- https://no-ai-icon.com/
