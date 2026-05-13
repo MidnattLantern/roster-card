@@ -5,6 +5,8 @@ import RosterCardDecorSVG from "./assets/roster-card-decor.svg?raw";
 import HeroIndexSVG from "./assets/hero-index.svg?raw";
 import GenDecor1SVG from "./assets/gen-decor-1.svg?raw";
 import CharDescriptionSVG from "./assets/char-description.svg?raw";
+import SelectorDecorLeftSVG from "./assets/selector-decor-left.svg?raw";
+import SelectorDecorRightSVG from "./assets/selector-decor-right.svg?raw";
 import { transAnimate } from './trans-animate';
 import { sessionMemory } from './session-memory';
 import { loopAnimate } from './loop-animate';
@@ -52,6 +54,14 @@ splashArtFrame.append(splashArt1, splashArt2, splashArt3, splashArtCaption);
 const splashArtSelectors = document.createElement("div");
 splashArtSelectors.classList.add("splash-art-selectors");
 
+const selectorDecorLeft = document.createElement("div");
+selectorDecorLeft.classList.add("selector-decor");
+selectorDecorLeft.innerHTML = SelectorDecorLeftSVG;
+
+const selectorDecorRight = document.createElement("div");
+selectorDecorRight.classList.add("selector-decor");
+selectorDecorRight.innerHTML = SelectorDecorRightSVG;
+
 const splashArtButton1 = document.createElement("button");
 splashArtButton1.textContent = "Splash hero 1";
 splashArtButton1.classList.add("splash-preview-1");
@@ -73,7 +83,13 @@ splashArtButton3.addEventListener("click", () => {
     handleScrollSplashArt(2);
 })
 
-splashArtSelectors.append(splashArtButton1, splashArtButton2, splashArtButton3);
+splashArtSelectors.append(
+    selectorDecorLeft,
+    splashArtButton1,
+    splashArtButton2,
+    splashArtButton3,
+    selectorDecorRight
+);
 // ====================
 
 // ===

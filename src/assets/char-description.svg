@@ -34,14 +34,14 @@
                 <g transform="matrix(366.385182,0,0,366.385182,1405.300646,915.490967)">
                 </g>
                 <g class="style-char-description-bottom-text">
-                    <text class="char-descrption-text" x="-3211.904px" y="915.491px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:366.385px;">...of a terrible fate</text>
+                    <text class="char-descrption-text" x="-3211.904px" y="915.491px">...of a terrible fate</text>
                 </g>
             </g>
             <g id="char-description-top-text" transform="matrix(0.277113,0,0,0.288822,3563.571955,679.073194)">
                 <g transform="matrix(366.385182,0,0,366.385182,-2112.569582,915.490967)">
                 </g>
                 <g class="style-char-description-top-text">
-                    <text class="char-descrption-text" x="-6509.907px" y="915.491px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:366.385px;">Street rat victim...</text>
+                    <text class="char-descrption-text" x="-6509.907px" y="915.491px">Street rat victim...</text>
                 </g>
             </g>
         </g>

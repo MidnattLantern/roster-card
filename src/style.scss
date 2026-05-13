@@ -111,6 +111,28 @@ main {
         align-items: end;
         z-index: 1;
 
+        .selector-decor {
+            display: flex;
+            height: 100px;
+            fill: var(--c-surface);
+
+            .selector-decor-dash {
+                fill: var(--c-body);
+            }
+
+            .selector-decor-fragments {
+                fill: var(--c-accent);
+            }
+
+            .selector-decor-waves {
+                fill: var(--c-accent);
+            }
+
+            .selector-decor-holes {
+                fill: var(--c-body);
+            }
+        }
+
         button {
             width: 150px;
             height: 50px;
@@ -256,6 +278,8 @@ footer {
 
     .char-descrption-text {
         fill: var(--c-body);
+        font-family: var(--f-mono);
+        font-size: 22rem;
     }
 }
 
